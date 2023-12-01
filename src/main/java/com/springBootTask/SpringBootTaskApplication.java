@@ -14,5 +14,7 @@ public class SpringBootTaskApplication {
 		SpringApplication.run(SpringBootTaskApplication.class, args);
 	}
 
+System.out.println("hellow");
+
 
 }
