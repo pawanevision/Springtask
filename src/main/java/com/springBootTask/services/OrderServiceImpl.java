@@ -68,7 +68,7 @@ public class OrderServiceImpl implements OrderService {
         Optional<Order> orderList=orderRepository.findById(orderId);
         if(orderId.equals(orderList.get().getOrderId())) {
             orderRepository.deleteById(orderId);
-System.out.println("hello");
+System.out.println("heljhjjjlo");
         }
         else{
             throw new NoSuchElementException();
@@ -92,7 +92,7 @@ System.out.println("hello");
         }
         return order;
     }
-System.out.println("hello");
+
 
 
 }
