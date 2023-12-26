@@ -68,7 +68,6 @@ public class OrderServiceImpl implements OrderService {
         Optional<Order> orderList = orderRepository.findById(orderId);
         if (orderId.equals(orderList.get().getOrderId())) {
             orderRepository.deleteById(orderId);
-            System.out.println("heljo");
         } else {
             throw new NoSuchElementException();
 
