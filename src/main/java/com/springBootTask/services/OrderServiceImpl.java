@@ -65,37 +65,44 @@ public class OrderServiceImpl implements OrderService {
         return orderDetail1;
     }
     public Order deleteOrderById(Long orderId) {
-        Optional<Order> orderList=orderRepository.findById(orderId);
-        if(orderId.equals(orderList.get().getOrderId())) {
+        Optional<Order> orderList = orderRepository.findById(orderId);
+        if (orderId.equals(orderList.get().getOrderId())) {
             orderRepository.deleteById(orderId);
-System.out.println("heljo");
-        }
-        else{
+            System.out.println("heljo");
+        } else {
             throw new NoSuchElementException();
-      
-        return orderList.get();
+
+
+        }
+
+        return null;
     }
 
     @Override
     public Order createOrder(Order order) {
-        List<Order> storedList = orderRepository.findAll();
-        if(storedList.isEmpty()) { orderRepository.save(order); }
-        else{
-            for(Order order1 : storedList) {
-                if (order.getOrderPersonName().equals(order.getOrderPersonName())) {
-                    throw new DataNotFoundException();
-                }
-                else {
-                    orderRepository.save(order);
-                }
-            }
-        }
-        return order;
+        return null;
     }
-
-
-
 }
+
+//    public Order createOrder(Order order) {
+//        List<Order> storedList = orderRepository.findAll();
+//        if(storedList.isEmpty()) { orderRepository.save(order); }
+//        else{
+//            for(Order order1 : storedList) {
+//                if (order.getOrderPersonName().equals(order.getOrderPersonName())) {
+//                    throw new DataNotFoundException();
+//                }
+//                else {
+//                    orderRepository.save(order);
+//                }
+//            }
+//        }
+//        return order;
+//    }
+
+
+
+
 
 
 

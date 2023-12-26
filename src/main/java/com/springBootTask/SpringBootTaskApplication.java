@@ -16,9 +16,4 @@ public class SpringBootTaskApplication {
 		System.out.println("hello pawan");
 	}
 
-System.out.println("hellow");
-
-
-
-
 }
